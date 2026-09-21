@@ -1,11 +1,5 @@
 package schoolmanagement;
 
-/**
- * Adapter.
- * Wraps an AttendanceSystem instance and translates the standard
- * integrateSystem() call into the AttendanceSystem-specific
- * markAttendance() call.
- */
 public class AttendanceSystemAdapter implements SchoolManagementApp {
 
     private final AttendanceSystem attendanceSystem;
@@ -16,7 +10,6 @@ public class AttendanceSystemAdapter implements SchoolManagementApp {
 
     @Override
     public void integrateSystem() {
-        // Translation happens here: integrateSystem() -> markAttendance()
         attendanceSystem.markAttendance();
     }
 }
