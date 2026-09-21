@@ -1,11 +1,5 @@
 package schoolmanagement;
 
-/**
- * Adapter.
- * Wraps a GradingSystem instance and translates the standard
- * integrateSystem() call into the GradingSystem-specific
- * recordGrades() call.
- */
 public class GradingSystemAdapter implements SchoolManagementApp {
 
     private final GradingSystem gradingSystem;
@@ -16,7 +10,6 @@ public class GradingSystemAdapter implements SchoolManagementApp {
 
     @Override
     public void integrateSystem() {
-        // Translation happens here: integrateSystem() -> recordGrades()
         gradingSystem.recordGrades();
     }
 }
